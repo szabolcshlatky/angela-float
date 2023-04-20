@@ -1,0 +1,416 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font: normal normal 16px/1.6 sans-serif;
+}
+
+body, button {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  line-height: 1.5;
+}
+
+menu {
+  list-style: none;
+}
+
+menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4.5vw, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 4vw, 4rem);
+}
+
+h4 {
+  font-size: clamp(1.4rem, 3.5vw, 3.5rem);
+}
+
+h5 {
+  font-size: clamp(1.2rem, 3vw, 3rem);
+}
+
+h6 {
+  font-size: clamp(1.1rem, 2.5vw, 2.5rem);
+}
+
+pre {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+dl, ul, ol {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+dd, li {
+  display: list-item;
+  margin-inline-start: 40px;
+}
+
+dt {
+  text-decoration: underline wavy;
+}
+
+dd {
+  list-style: square inside;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+em {
+  font-style: oblique;
+}
+
+ins {
+  text-decoration: double underline;
+}
+
+ins::before,
+ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  background-color: yellow;
+}
+
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}
+
+del {
+  text-decoration: double line-through;
+}
+
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  background-color: tomato;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
+
+s::before,
+s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+s::before {
+  content: " [start of stricken text] ";
+}
+
+s::after {
+  content: " [end of stricken text] ";
+}
+
+mark {
+  background-color: internal value;
+  color: internal value;
+}
+
+mark::before,
+mark::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  background-color: tomato;
+}
+
+mark::before {
+  content: " [highlight start] ";
+}
+
+mark::after {
+  content: " [highlight end] ";
+}
+
+data:hover::after {
+  content: "(" attr(value) ")";
+  font-size: smaller;
+}
+
+dfn::before {
+  content: "(";
+}
+
+dfn::after {
+  content: ")";
+}
+
+abbr {
+  display: inline;
+  cursor: help;
+}
+
+address {
+  font-style: normal;
+}
+
+a:link, a:visited {
+  color: internal value;
+  text-decoration: 0.5px dashed underline;
+  cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+  color: internal value;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: 1s;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+code {
+  font: normal normal 1rem/1.6 monospace;
+  color: black;
+  word-wrap: break-word;
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+samp {
+  font: normal normal 1rem/1.6 monospace;
+  color: crimson;
+  word-wrap: break-word;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
+kbd {
+  font: normal normal 1rem/1.6 monospace;
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+var {
+  font: italic bold 1rem/1.6 monospace;
+}
+
+iframe {
+  border: none;
+}
+
+button, input[type=button i], input[type=submit i], input[type=reset i] {
+  display: inline-block;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.B__E--M {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  z-index: 9999;
+  opacity: 0.5;
+}
+.B__E--M:hover {
+  opacity: 1;
+  scale: 1.2;
+  transition: 1s;
+  transform: rotateZ(-90deg);
+}
+.B__E--M button {
+  border: none;
+  background: none;
+}
+
+/* PROJECT */
+#index body {
+  color: #40514e;
+  text-align: center;
+  font-family: serif;
+}
+#index body header {
+  position: relative;
+  padding-top: 100px;
+  background-color: #e4f9f5;
+}
+#index body header h1 {
+  margin: 50px auto 0 auto;
+  font-family: cursive;
+  font-size: 5.625rem;
+  line-height: 2;
+}
+#index body header .cloud__top {
+  position: absolute;
+  top: 40px;
+  right: 300px;
+}
+#index body header .cloud__bottom {
+  position: absolute;
+  bottom: 300px;
+  left: 250px;
+}
+#index body .intro {
+  width: 30%;
+  margin: auto;
+}
+#index body h2, #index body h3 {
+  font-family: sans-serif;
+}
+#index body h2 {
+  padding-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+#index body h1, #index body h2 {
+  color: #66bfbf;
+}
+#index body h3, #index body a {
+  color: #11999e;
+  font-family: sans-serif;
+}
+#index body a {
+  margin: 10px 20px;
+  text-decoration: none;
+}
+#index body a:hover {
+  color: #eaf6f6;
+}
+#index body p {
+  line-height: 2;
+}
+#index body hr {
+  width: 4%;
+  margin: 100px auto;
+  border: 6px dotted #eaf6f6;
+  border-bottom: none;
+}
+#index body main {
+  margin: 100px 0;
+}
+#index body main .skill-left {
+  text-align: left;
+}
+#index body main .skill-right {
+  text-align: right;
+}
+#index body main .skill-row {
+  width: 50%;
+  margin: 100px auto;
+  /*
+  .clear-left {
+    clear: left;
+  }
+
+  .clear-right {
+    clear: right;
+  }
+  */
+}
+#index body main .skill-row .computer {
+  float: left;
+  margin-right: 30px;
+}
+#index body main .skill-row .chilli {
+  float: right;
+  margin-left: 30px;
+}
+#index body .img {
+  width: 15%;
+}
+#index body aside .contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+#index body aside .btn {
+  display: inline-block;
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+#index body aside .btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+#index body footer {
+  padding: 50px 0 20px;
+  background-color: #66bfbf;
+}
+#index body footer .copyright {
+  color: #eaf6f6;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22_reset.scss%22,%22style.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAgBA;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;;;AAIJ;ACtSE;EACE;EACA;EACA;;AAGA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAIJ;EACE;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;;AAIJ;EACE;;AAGF;EACE;EACA;EACA;EACA;;AAGJ;EACE;;AAEA;EACE;;AAGF;EACE;;AAGF;EACE;EACA;AAYA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAVA;EACE;EACA;;AAGF;EACE;EACA;;AAeN;EACE;;AAIA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAKN;EACE;EACA;;AAEA;EACE;EACA;EACA%22,%22file%22:%22style.css%22%7D */
